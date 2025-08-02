@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PocketGNU - Professional Linux On Your Phone</title>
+    <meta name="description" content="PocketGNU brings the full power of Linux to mobile devices with GUI applications, native hardware integration, and modern developer tools.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Offline Notification Banner -->
+    <div id="offline-banner" class="offline-banner" style="display:none; position: fixed; top: 0; width: 100%; background-color: #b91c1c; color: white; text-align: center; padding: 0.5rem; font-weight: 600; z-index: 1000;">
+        You are offline. Some features may be unavailable.
+    </div>
+
+    <!-- Skip to main content links -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-text">PocketGNU</span>
+                </div>
+                <nav class="nav" aria-label="Main navigation">
+                    <a href="#terminal" class="nav-link">Terminal</a>
+                    <a href="#code-editor" class="nav-link">Code Editor</a>
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#community" class="nav-link">Community</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Notification Bar -->
+    <div class="notification-bar">
+        <div class="container">
+            <p>Alex from San Francisco started their first Linux project</p>
+            <span class="time">2 minutes ago</span>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span>Advanced Linux Terminal for Mobile</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Professional Linux<br>
+                        <span class="highlight">On Your Phone</span>
+                    </h1>
+                    <p class="hero-description">
+                        PocketGNU brings the full power of Linux to mobile devices with GUI applications, native hardware integration, and modern developer tools.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" id="get-started">Get Started</button>
+                        <button class="btn btn-secondary" id="learn-more">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demo Sections -->
+        <section class="demo-section">
+            <div class="container">
+                <div class="demo-grid">
+                    <!-- Live Terminal -->
+                    <div class="demo-card" id="terminal">
+                        <h3>Live Terminal</h3>
+                        <div class="terminal-window">
+                            <div class="terminal-header">
+                                <div class="terminal-controls">
+                                    <span class="control red"></span>
+                                    <span class="control yellow"></span>
+                                    <span class="control green"></span>
+                                </div>
+                                <span class="terminal-title">PocketGNU Terminal</span>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="terminal-line">
+                                    <span class="prompt">$</span>
+                                    <span class="command" id="terminal-command"></span>
+                                    <span class="cursor">|</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Code Editor -->
+                    <div class="demo-card" id="code-editor">
+                        <h3>Code Editor</h3>
+                        <div class="editor-window">
+                            <div class="editor-header">
+                                <div class="editor-tabs">
+                                    <span class="tab active">JavaScript</span>
+                                </div>
+                                <button class="run-btn">Run</button>
+                            </div>
+                            <div class="editor-body">
+                                <div class="line-numbers">
+                                    <span>1</span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                </div>
+                                <div class="code-content">
+                                    <div class="code-line"><span class="keyword">function</span> <span class="function">hello</span>() {</div>
+                                    <div class="code-line">  <span class="function">console</span>.<span class="method">log</span>(<span class="string">'Hello PocketGNU!'</span>);</div>
+                                    <div class="code-line">}</div>
+                                    <div class="code-line"><span class="function">hello</span>();</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beta Access Section -->
+        <section class="beta-access">
+            <div class="container">
+                <div class="beta-content">
+                    <h2>Limited Beta Access</h2>
+                    <p class="beta-status">ENDING SOON</p>
+                    <p class="beta-description">Join 38 other early adopters and get exclusive features</p>
+                    <div class="beta-stats">
+                        <span class="spots-left">38 spots left</span>
+                        <div class="countdown" id="countdown-timer">0h0m0s</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Stats -->
+        <section class="community-stats" id="community">
+            <div class="container">
+                <h2>Growing Community & Ecosystem</h2>
+                <p class="section-subtitle">Real-time metrics from our thriving developer community</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">412</div>
+                        <div class="stat-label">GitHub Stars</div>
+                        <div class="stat-change positive">+12% this week</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">2.9K</div>
+                        <div class="stat-label">Downloads</div>
+                        <div class="stat-change positive">+24% this month</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">75</div>
+                        <div class="stat-label">Forks</div>
+                        <div class="stat-change positive">+8% this week</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Contributors</div>
+                        <div class="stat-change positive">+5 this month</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">280</div>
+                        <div class="stat-label">Weekly Active</div>
+                        <div class="stat-change positive">+15% vs last week</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Open Issues</div>
+                        <div class="stat-change negative">-3 this week</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">GUI Applications</div>
+                        <div class="stat-change positive">+3 this month</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">30+</div>
+                        <div class="stat-label">Mobile APIs</div>
+                        <div class="stat-change positive">+2 this week</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Plugin Categories</div>
+                        <div class="stat-change positive">+4 new categories</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Terminal Features</div>
+                        <div class="stat-change positive">+5 new features</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Choose Your Path -->
+        <section class="choose-path" id="choose-your-path">
+            <div class="container">
+                <h2>Choose Your Path</h2>
+                <p class="section-subtitle">Tell us what you're looking for and we'll customize your PocketGNU experience</p>
+                
+                <div class="path-grid">
+                    <div class="path-card featured">
+                        <div class="path-badge">Most Popular</div>
+                        <h3>Professional Developer</h3>
+                        <p class="path-description">Build and deploy mobile apps with full Linux environment</p>
+                        <ul class="path-features">
+                            <li>Full IDE experience on mobile</li>
+                            <li>Git integration & version control</li>
+                            <li>Docker containers & deployment</li>
+                            <li>Remote debugging capabilities</li>
+                        </ul>
+                        <button class="btn btn-primary">Start Coding Now</button>
+                    </div>
+
+                    <div class="path-card">
+                        <h3>Student & Learner</h3>
+                        <p class="path-description">Learn Linux and programming anywhere, anytime</p>
+                        <ul class="path-features">
+                            <li>Interactive coding tutorials</li>
+                            <li>Practice environments</li>
+                            <li>Educational resources</li>
+                            <li>Community support</li>
+                        </ul>
+                        <button class="btn btn-secondary">Learn for Free</button>
+                    </div>
+
+                    <div class="path-card">
+                        <h3>Enterprise Team</h3>
+                        <p class="path-description">Collaborate on projects with team-wide Linux environments</p>
+                        <ul class="path-features">
+                            <li>Team collaboration tools</li>
+                            <li>Enterprise security</li>
+                            <li>Usage analytics & reporting</li>
+                            <li>Priority support</li>
+                        </ul>
+                        <button class="btn btn-secondary">Request Demo</button>
+                    </div>
+
+                    <div class="path-card">
+                        <h3>Content Creator</h3>
+                        <p class="path-description">Create tutorials and share your Linux expertise</p>
+                        <ul class="path-features">
+                            <li>Screen recording tools</li>
+                            <li>Session sharing features</li>
+                            <li>Community showcase</li>
+                            <li>Monetization options</li>
+                        </ul>
+                        <button class="btn btn-secondary">Start Creating</button>
+                    </div>
+                </div>
+
+                <!-- Quick Start Options -->
+                <div class="quick-start">
+                    <h3>Not Sure Where to Start?</h3>
+                    <p>No problem! Here are some quick ways to explore PocketGNU</p>
+                    <div class="quick-options">
+                        <button class="quick-option">
+                            <span class="option-title">Just Try It</span>
+                            <span class="option-desc">Jump right in with no setup required</span>
+                        </button>
+                        <button class="quick-option">
+                            <span class="option-title">Watch Demo</span>
+                            <span class="option-desc">See PocketGNU in action first</span>
+                        </button>
+                        <button class="quick-option">
+                            <span class="option-title">Join Community</span>
+                            <span class="option-desc">Connect with other developers</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Banner -->
+        <section class="stats-banner">
+            <div class="container">
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Developers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">GUI Apps</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Countries</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">Uptime</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Early Adopter Perks -->
+        <section class="early-adopter">
+            <div class="container">
+                <h2>Early Adopter Perks</h2>
+                <h3>Be Among the First 1,000 Users</h3>
+                <p class="perks-subtitle">Get exclusive lifetime benefits worth $500+</p>
+                
+                <div class="perks-grid">
+                    <div class="perk-item">
+                        <h4>Lifetime free premium features</h4>
+                        <span class="perk-value">$200 value</span>
+                    </div>
+                    <div class="perk-item">
+                        <h4>Priority support & direct developer access</h4>
+                    </div>
+                    <div class="perk-item">
+                        <h4>Exclusive beta features before public release</h4>
+                    </div>
+                    <div class="perk-item">
+                        <h4>Special early adopter badge & recognition</h4>
+                    </div>
+                    <div class="perk-item">
+                        <h4>No usage limits during beta period</h4>
+                    </div>
+                </div>
+                
+                <p class="perks-cta">Limited time: Join now and lock in these benefits forever</p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section" id="features">
+            <div class="container">
+                <h2>Everything You Need for Mobile Development</h2>
+                <p class="section-subtitle">From terminal automation to GUI applications, PocketGNU provides professional development tools optimized for mobile workflows.</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Advanced Terminal</h3>
+                        <p>Multi-session terminal with persistence, automation, and visual scripting capabilities</p>
+                        <div class="feature-tags">
+                            <span class="tag">Multi-session</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">Visual scripting</span>
+                            <span class="tag">Persistence</span>
+                        </div>
+                        <button class="btn btn-outline">Try Interactive Demo</button>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>GUI Applications</h3>
+                        <p>Run full Linux desktop apps like VS Code, GIMP, and Firefox with mobile-optimized controls</p>
+                        <div class="feature-tags">
+                            <span class="tag">VS Code</span>
+                            <span class="tag">GIMP</span>
+                            <span class="tag">Firefox</span>
+                            <span class="tag">Touch controls</span>
+                        </div>
+                        <button class="btn btn-outline">Try Interactive Demo</button>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Mobile-Native APIs</h3>
+                        <p>Access camera, GPS, sensors, and device hardware from command line and applications</p>
+                        <div class="feature-tags">
+                            <span class="tag">Camera</span>
+                            <span class="tag">GPS</span>
+                            <span class="tag">Sensors</span>
+                            <span class="tag">Hardware access</span>
+                        </div>
+                        <button class="btn btn-outline">Try Interactive Demo</button>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Real-time Collaboration</h3>
+                        <p>Share terminal sessions for pair programming and remote development collaboration</p>
+                        <div class="feature-tags">
+                            <span class="tag">Session sharing</span>
+                            <span class="tag">Pair programming</span>
+                            <span class="tag">Remote debugging</span>
+                        </div>
+                        <button class="btn btn-outline">Try Interactive Demo</button>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Plugin Ecosystem</h3>
+                        <p>Extensible marketplace with plugins for development, automation, and system utilities</p>
+                        <div class="feature-tags">
+                            <span class="tag">Development tools</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">System utilities</span>
+                        </div>
+                        <button class="btn btn-outline">Try Interactive Demo</button>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Containerization</h3>
+                        <p>Secure app isolation with container export to standalone Android APKs</p>
+                        <div class="feature-tags">
+                            <span class="tag">App isolation</span>
+                            <span class="tag">APK export</span>
+                            <span class="tag">Security</span>
+                        </div>
+                        <button class="btn btn-outline">Try Interactive Demo</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mobile Interface Mockup -->
+        <section class="mobile-mockup">
+            <div class="container">
+                <h2>Built for Modern Developers</h2>
+                <p class="section-subtitle">Whether you're coding on the go, collaborating remotely, or need full Linux capabilities, PocketGNU adapts to your workflow.</p>
+                
+                <div class="mockup-content">
+                    <div class="mockup-text">
+                        <div class="use-case">
+                            <h3>Mobile Development</h3>
+                            <p>Full IDE experience with VS Code, Git integration, and native mobile API testing all on your phone or tablet.</p>
+                        </div>
+                        <div class="use-case">
+                            <h3>Remote Collaboration</h3>
+                            <p>Share live terminal sessions for pair programming, code reviews, and remote debugging with team members.</p>
+                        </div>
+                        <div class="use-case">
+                            <h3>Content Creation</h3>
+                            <p>Run professional applications like GIMP, Inkscape, and video editors with touch-optimized controls.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="phone-mockup">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <div class="phone-header">
+                                    <span class="time">11:23 PM</span>
+                                    <div class="phone-status">
+                                        <span class="signal">📶</span>
+                                        <span class="battery">🔋</span>
+                                    </div>
+                                </div>
+                                <div class="phone-content">
+                                    <h4>PocketGNU</h4>
+                                    <p class="phone-subtitle">Linux on Mobile</p>
+                                    <div class="app-grid">
+                                        <div class="app-icon">📝 VS Code</div>
+                                        <div class="app-icon">💻 Terminal</div>
+                                        <div class="app-icon">🎨 GIMP</div>
+                                        <div class="app-icon">🌐 Firefox</div>
+                                        <div class="app-icon">📁 Files</div>
+                                        <div class="app-icon">⚙️ Settings</div>
+                                    </div>
+                                    <div class="sensors-panel">
+                                        <h5>Active Sensors</h5>
+                                        <div class="sensor-list">
+                                            <div class="sensor">Camera <span class="status active">active</span></div>
+                                            <div class="sensor">GPS <span class="status active">active</span></div>
+                                            <div class="sensor">Gyroscope <span class="status active">active</span></div>
+                                            <div class="sensor">Accelerometer <span class="status active">active</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Activity Feed -->
+        <section class="live-activity">
+            <div class="container">
+                <h2>Live Activity</h2>
+                <div class="activity-feed" id="activity-feed">
+                    <div class="activity-item">
+                        <div class="activity-avatar">EW</div>
+                        <div class="activity-content">
+                            <div class="activity-header">
+                                <span class="activity-name">Emma Wilson</span>
+                                <span class="activity-location">London</span>
+                            </div>
+                            <div class="activity-action">executed code python-script</div>
+                            <div class="activity-time">just now</div>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-avatar">OH</div>
+                        <div class="activity-content">
+                            <div class="activity-header">
+                                <span class="activity-name">Omar Hassan</span>
+                                <span class="activity-location">Cairo</span>
+                            </div>
+                            <div class="activity-action">configured environment development-setup</div>
+                            <div class="activity-time">just now</div>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-avatar">OH</div>
+                        <div class="activity-content">
+                            <div class="activity-header">
+                                <span class="activity-name">Omar Hassan</span>
+                                <span class="activity-location">Cairo</span>
+                            </div>
+                            <div class="activity-action">deployed app mobile-calculator</div>
+                            <div class="activity-time">just now</div>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-avatar">CR</div>
+                        <div class="activity-content">
+                            <div class="activity-header">
+                                <span class="activity-name">Carlos Rodriguez</span>
+                                <span class="activity-location">Barcelona</span>
+                            </div>
+                            <div class="activity-action">pushed to repository main-branch</div>
+                            <div class="activity-time">just now</div>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-avatar">SK</div>
+                        <div class="activity-content">
+                            <div class="activity-header">
+                                <span class="activity-name">Sarah Kim</span>
+                                <span class="activity-location">Seoul</span>
+                            </div>
+                            <div class="activity-action">deployed app mobile-calculator</div>
+                            <div class="activity-time">just now</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <h2>Loved by Developers Worldwide</h2>
+                <p class="section-subtitle">Join thousands of developers who use PocketGNU to build amazing mobile experiences</p>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"PocketGNU revolutionized my mobile development workflow. Having a full Linux terminal on my phone is game-changing."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SC</div>
+                            <div class="author-info">
+                                <div class="author-name">Sarah Chen</div>
+                                <div class="author-title">Mobile Developer • TechStart Inc.</div>
+                                <div class="author-handle">@sarahchen</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The SSH management and automation features saved me hours every week. Perfect for on-the-go server management."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MR</div>
+                            <div class="author-info">
+                                <div class="author-name">Marcus Rodriguez</div>
+                                <div class="author-title">DevOps Engineer • CloudScale</div>
+                                <div class="author-handle">@marcusops</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Built my entire startup's mobile app using PocketGNU's APIs. The camera and GPS integration works flawlessly."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">PP</div>
+                            <div class="author-info">
+                                <div class="author-name">Priya Patel</div>
+                                <div class="author-title">Full Stack Developer • Indie Hacker</div>
+                                <div class="author-handle">@priyacodes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta">
+            <div class="container">
+                <h2>Ready to Get Started?</h2>
+                <p class="section-subtitle">Join developers worldwide who are using PocketGNU to bring professional Linux development to mobile devices.</p>
+                
+                <div class="cta-buttons">
+                    <button class="btn btn-primary btn-large">
+                        Claim Your Spot
+                        <span class="btn-badge">Limited!</span>
+                    </button>
+                    <button class="btn btn-secondary btn-large">View Documentation</button>
+                </div>
+                
+                <div class="cta-features">
+                    <span class="feature">Free & Open Source</span>
+                    <span class="feature">Cross-platform</span>
+                    <span class="feature">No Registration Required</span>
+                </div>
+                
+                <button class="btn btn-outline">Start Tour</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">PocketGNU</span>
+                    <p>Professional Linux for Mobile</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">GitHub</a>
+                    <a href="#" class="footer-link">Documentation</a>
+                    <a href="#" class="footer-link">Community</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Phase 4: Advanced UX Containers -->
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+    <div id="progress-container" class="progress-container"></div>
+    
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="settings-modal" role="dialog" aria-labelledby="settings-title" aria-hidden="true">
+        <div class="settings-overlay" data-close="true"></div>
+        <div class="settings-content">
+            <div class="settings-header">
+                <h2 id="settings-title" class="settings-title">Personalization Settings</h2>
+                <button class="settings-close" aria-label="Close settings">×</button>
+            </div>
+            <div class="settings-body">
+                <div class="settings-section">
+                    <h3 class="settings-section-title">Theme Customization</h3>
+                    <div class="theme-options">
+                        <button class="theme-btn active" data-theme="default">Default</button>
+                        <button class="theme-btn" data-theme="dark">Dark</button>
+                        <button class="theme-btn" data-theme="light">Light</button>
+                        <button class="theme-btn" data-theme="custom">Custom</button>
+                    </div>
+                    <div class="custom-theme-controls" style="display: none;">
+                        <label class="settings-label">Primary Color:</label>
+                        <input type="color" id="primary-color" class="color-input" value="#1e40af">
+                        <label class="settings-label">Background Color:</label>
+                        <input type="color" id="background-color" class="color-input" value="#0f172a">
+                    </div>
+                </div>
+                <div class="settings-section">
+                    <h3 class="settings-section-title">Layout Preferences</h3>
+                    <label class="settings-checkbox">
+                        <input type="checkbox" id="compact-layout"> Compact Layout
+                    </label>
+                    <label class="settings-checkbox">
+                        <input type="checkbox" id="show-animations" checked> Enable Animations
+                    </label>
+                </div>
+                <div class="settings-section">
+                    <h3 class="settings-section-title">Advanced Features</h3>
+                    <button class="btn btn-secondary" id="demo-skeleton">Demo Skeleton Loading</button>
+                    <button class="btn btn-secondary" id="demo-progress">Demo Progress Bar</button>
+                    <button class="btn btn-secondary" id="start-voice">Start Voice Commands</button>
+                    <button class="btn btn-secondary" id="ai-suggestions">AI Suggestions</button>
+                </div>
+                <div class="settings-section">
+                    <h3 class="settings-section-title">Keyboard Shortcuts</h3>
+                    <div class="shortcuts-list">
+                        <div class="shortcut-item">
+                            <span class="shortcut-keys">Ctrl + Shift + S</span>
+                            <span class="shortcut-desc">Open Settings</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-keys">Ctrl + Shift + T</span>
+                            <span class="shortcut-desc">Toggle Theme</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-keys">Ctrl + Shift + V</span>
+                            <span class="shortcut-desc">Voice Commands</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-keys">Escape</span>
+                            <span class="shortcut-desc">Close Modal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="settings-footer">
+                <button class="btn btn-primary" id="save-settings">Save Settings</button>
+                <button class="btn btn-secondary" id="reset-settings">Reset to Default</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load JavaScript files in correct order -->
+    <script src="js/errorHandler.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/advancedUX.js"></script>
+    <script src="js/performance.js" defer></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                .then(registration => {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch(error => {
+                    console.error('Service Worker registration failed:', error);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
