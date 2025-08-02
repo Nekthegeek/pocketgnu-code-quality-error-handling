@@ -1,0 +1,53 @@
+{
+  "name": "pocketgnu-app",
+  "version": "1.0.0",
+  "description": "Professional Linux On Your Phone - Enhanced with Phase 1 improvements",
+  "main": "index.html",
+  "scripts": {
+    "lint": "eslint js/*.js",
+    "lint:fix": "eslint js/*.js --fix",
+    "format": "prettier --write \"**/*.{js,html,css,json}\"",
+    "format:check": "prettier --check \"**/*.{js,html,css,json}\"",
+    "serve": "python3 -m http.server 8000",
+    "serve:node": "npx http-server -p 8000 -c-1",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "validate": "npm run lint && npm run format:check",
+    "dev": "npm run serve",
+    "build": "echo \"Build process not yet implemented\"",
+    "clean": "echo \"Clean process not yet implemented\"",
+    "analyze": "echo \"Bundle analysis not yet implemented\""
+  },
+  "keywords": [
+    "linux",
+    "mobile",
+    "terminal",
+    "development",
+    "pocketgnu",
+    "javascript",
+    "web-app"
+  ],
+  "author": "PocketGNU Team",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pocketgnu/pocketgnu-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pocketgnu/pocketgnu-app/issues"
+  },
+  "homepage": "https://pocketgnu.github.io/pocketgnu-app"
+}
